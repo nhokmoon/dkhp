@@ -1,0 +1,32 @@
+﻿@model IEnumerable<dkhp.Models.GuestResponse>
+@{ 
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>danh sach sinh vien dan dang ky</title>
+</head>
+<body>
+    <h2>danh sach</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ma sing vien</th>
+                <th>ten sinh vien</th>
+                <th>lop</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (dkhp.Models.GuestResponse r in Model)
+            {
+                <tr>
+                    <td>@r.msv</td>
+                    <td>@r.name</td>
+                    <td>@r.Class</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

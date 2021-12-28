@@ -1,0 +1,41 @@
+﻿@model dkhp.Models.GuestResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=deviece-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form asp-action="DangKy" method="post">
+        <p>
+            <label asp-for="msv">ma sinh vien</label><br />
+            <input asp-for="msv" /><br />
+        </p>
+        <p>
+            <label asp-for="name">ho ten sinh vien</label><br />
+            <input asp-for="name" /><br />
+        </p>
+        <p>
+            <label asp-for="Class">lop</label><br />
+            <input asp-for="Class" /> <br />
+        </p>
+        <p>
+            <label asp-for="dateofbirth">ngay sinh</label><br />
+            <input asp-for="dateofbirth" /><br />
+        </p>
+        <p>
+            <label>danh sach hoc phan</label><br />
+            <select asp-for="WillAttend">
+                <option value="">chon hoc phan</option>
+                <option value="true">toan cao cap</option>
+                <option value="true">toan chuyen nganh</option>
+                <option value="true">java</option>
+            </select>
+        </p>
+        <button type="submit">dang ky hoc phan</button>
+    </form>
+</body>
+</html>

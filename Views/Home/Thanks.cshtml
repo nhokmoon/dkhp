@@ -1,0 +1,25 @@
+﻿@model dkhp.Models.GuestResponse
+@{ 
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<htnl>
+<head>
+    <title>thanks</title>
+</head>
+<body>
+    <p>
+        <h1> @Model.name</h1>
+        @if (Model.WillAttend == true)
+        {
+         @:qua trinh dang ky cua bn da hoan tat
+        }
+        else
+        {
+        @:ban chua chon hoc phan
+        }
+    </p>
+    <p>click <a asp-action="List">here</a> de xem danh sach sinh vien da dang ky</p>
+    <p>click <a asp-action="DangKy">here</a> de dang ky lai neu ban chua chon hoc phan</p>
+</body>
+</htnl>
